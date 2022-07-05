@@ -1,0 +1,31 @@
+#root {
+    overflow: hidden;
+    margin: 0 auto;
+}
+.posts:hover #read-info {
+    display: block;
+}
+
+.read-more {
+    float: right;
+    color: #0084ff;
+    background-color: rgba(0,132,255,.1);
+}
+
+.read-more:hover {
+    background-color: rgba(0,132,255,.2);
+}
+
+#read-info {
+    position: relative;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    padding: 5px;
+    font-size: 0.5em;
+    color: #999;
+}
+@media (min-width: 960px) {
+    #read-info {
+        display: none;
+    }
+}

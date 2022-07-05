@@ -1,0 +1,94 @@
+baseURL =                       "https://yi-Xu-0100.github.io/hugo-theme-whiteink/"
+config =                        "config.toml"
+enableEmoji =                   true
+hasCJKLanguage =                true
+languageCode =                  "zh-cmn-Hans"
+summaryLength =                 50
+log =                           false
+rssLimit =                      15
+metaDataFormat =                "yaml"
+themesDir =                     "../../"
+theme =                         "hugo-theme-whiteink"
+title =                         "WhiteInk"
+verbose =                       true
+watch =                         true
+disableFastRender =             true
+pygmentsOptions =               "linenos=table"
+pygmentsCodeFencesGuessSyntax = true
+pygmentsUseClasses =            true
+pygmentsCodeFences =            true
+pygmentsStyle =                 "monokai"
+copyright =                     "yi_Xu"
+# googleAnalytics =              ""
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+[permalinks]
+    post = "/:section/:title/"
+
+[menu]
+    [[menu.main]]
+        Name = "编程体验"
+        Weight = 1
+        Identifier = "programming"
+        URL = "/programming/"
+    [[menu.main]]
+        Name = "其他分享"
+        Weight = 3
+        Identifier = "other"
+        URL = "/other/"
+    [[menu.main]]
+        Name = "生活感悟"
+        Weight = 4
+        Identifier = "blog"
+        URL = "/blog/"
+    [[menu.home]]
+        Name = "首页"
+        Weight = 1
+        URL = "/"
+    [[menu.home]]
+        Name = "归档"
+        Weight = 2
+        URL = "/page/archieves/"
+    [[menu.home]]
+        Name = "关于"
+        Weight = 3
+        URL = "/page/about/"
+    [[menu.home]]
+        Name = "卡片集"
+        Weight = 4
+        URL = "/page/cards/"
+
+[params]
+    author = "yi_Xu"
+    email = "yi_Xu@yixuju.cn"
+    record = "鲁 ICP 备 17049362 号"
+    description = "A website about yi_Xu. The content includes the sharing of programming experience and blog about life perception."
+    keywords = "web,python,blog,batch"
+    image = "img/background.jpg"
+    locale = "zh-CN"
+    app_id = 198934840692875
+    card = "summary"
+    motto = "品水如酒，愚醉……"
+    license = '<a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank rel="nofollow">知识共享署名-非商业性使用 4.0 国际许可协议</a>'
+    mainSections = ["programming", "other"]
+    [[params.contact]]
+        Name = "TG 频道"
+        Text = "t.me/yixuju_notify"
+        URL = "https://t.me/yixuju_notify"
+    [[params.contact]]
+        Name = "TG 群组"
+        Text = "t.me/yixuju"
+        URL = "https://t.me/yixuju"
+    [[params.contact]]
+        Name = "QQ 群组"
+        Text = "495793229"
+        URL = "https://jq.qq.com/?_wv=1027&k=XKIJXRol"
+    [[params.contact]]
+        Name = "联系邮箱"
+        Text = "yi_Xu@yixuju.cn"
+        URL = "mailto:yi_Xu@yixuju.cn"
+    [[params.contact]]
+        Name = "微信公众号"
+        Text = "逸絮居"

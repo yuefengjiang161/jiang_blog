@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang={{ .Site.LanguageCode }}>
+    <head>
+        {{ partial "head.html" . }}
+        {{ block "description" . }}
+        {{ end }}
+    </head>
+    <body>
+        {{ partial "mobile.html" . }}
+        {{ partial "header.html" . }}
+        <div id="container">
+            <section id="main">
+                {{ block "main" . }}
+                    {{ partial "main.html" . }}
+                {{ end }}
+            </section>
+            <section id="sidebar">
+                {{ block "sidebar" . }}
+                    {{ partial "sidebar.html" . }}
+                {{ end }}
+            </section>
+        </div>
+        {{ partial "footer.html" . }}
+    </body>
+</html>

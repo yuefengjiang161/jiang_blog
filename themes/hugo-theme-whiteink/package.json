@@ -1,0 +1,60 @@
+{
+  "name": "hugo-theme-whiteink",
+  "version": "0.0.8",
+  "description": "Hugo theme whiteink",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint-check": "prettier --check **/*.{css,js,yml,yaml,json,md} && eslint .",
+    "format": "prettier --write **/*.{css,js,yml,yaml,json,md} && eslint .",
+    "clear": "rimraf -rf exampleSite/public/* static/css/style.min.css static/js/custom.min.js",
+    "build-css": "stylus static/css/style.styl -c -o static/css/style.min.css",
+    "build-js": "uglifyjs static/js/custom.js -c -o static/js/custom.min.js",
+    "add-css-js": "git add static/css/style.min.css static/js/custom.min.js",
+    "rebuild": "npm run clear && npm run build-css && npm run build-js && npm run add-css-js",
+    "test": "npm run rebuild && cd exampleSite/ && hugo server"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo 'pre-commit...' && npm run rebuild && lint-staged && npm run lint-check"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js}": [
+      "prettier --write",
+      "git add",
+      "eslint"
+    ],
+    "**/*.{md,json,yml,yaml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yi-Xu-0100/hugo-theme-whiteink.git"
+  },
+  "keywords": [
+    "theme",
+    "Hugo",
+    "hugo-theme-whiteink"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yi-Xu-0100/hugo-theme-whiteink/issues"
+  },
+  "homepage": "https://github.com/yi-Xu-0100/hugo-theme-whiteink#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "rimraf": "^3.0.2",
+    "stylus": "^0.58.1",
+    "uglifyjs": "^2.4.11"
+  }
+}

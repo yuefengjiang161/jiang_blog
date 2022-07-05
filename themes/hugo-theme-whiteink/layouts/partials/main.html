@@ -1,0 +1,38 @@
+<article id="post" class="card">
+    <div id="post-title">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div id="post-cotent">
+        {{ .Content }}
+    </div>
+    {{ partial "copyright.html" . }}
+</article>
+{{ if or (and (isset .Params "prev") (ne .Params.Prev "none")) (and (isset .Params "next") (ne .Params.Next "none")) }}
+    <div class=" card pagination">
+    {{ with .Params.Prev }}
+        <a class="button prev-page" href={{ . | relURL }} {{ with $.Params.prevTitle }} title={{ . }} {{ end }}>
+            上一页
+        </a>
+    {{ end }}
+        {{ with .Params.Next }}
+        <a class="button next-page" href= {{ . | relURL }} {{ with $.Params.nextTitle }} title={{ . }} {{ end }}>
+            下一页
+        </a>
+        {{ end }}
+    </div>
+{{ else }}
+    {{ if ne .Type "page" }}
+        <div class=" card pagination">
+        {{ with .PrevInSection }}
+            <a class="button prev-page" href={{ .RelPermalink }} title={{ .Title }}>
+                上一页
+            </a>
+        {{ end }}
+            {{ with .NextInSection }}
+            <a class="button next-page" href= {{ .RelPermalink }} title={{ .Title }}>
+                下一页
+            </a>
+            {{ end }}
+        </div>
+    {{ end }}
+{{ end }}

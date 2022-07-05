@@ -1,0 +1,20 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "WhiteInk"
+license = "MIT"
+licenselink = "https://github.com/yi-Xu-0100/hugo-theme-whiteink/blob/master/LICENSE"
+description = "personal theme for yixuju"
+homepage = "https://github.com/yi-Xu-0100/hugo-theme-whiteink"
+tags = []
+features = []
+
+[author]
+  name = "yi_Xu"
+  homepage = "https://github.com/yi-Xu-0100"
+
+# If porting an existing theme
+[original]
+  name = "Aath"
+  homepage = "https://github.com/lewis-geek/hexo-theme-Aath"
+  repo = "https://github.com/lewis-geek/hexo-theme-Aath"

@@ -1,0 +1,4 @@
+theme: "我的笔记"
+baseURL: http://example.org/
+languageCode: en-us
+title: My Note

@@ -1,0 +1,20 @@
+<header>
+    <div id="header">
+        <a id = "site-title" href= {{ .Site.BaseURL }} >
+            <span>{{ .Site.Title }}</span>
+        </a>
+        <ul id="header-menu">
+            <li>
+                <a class="gotop" href="#">置顶</a>
+            </li>
+            {{ $currentURL := .RelPermalink }}
+            {{ range .Site.Menus.home }}
+                <li>
+                    <a href= {{ .URL }} {{ if eq $currentURL .URL }}class="active"{{ end }}>
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</header>
